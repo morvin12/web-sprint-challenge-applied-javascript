@@ -14,43 +14,33 @@
   // </div>
   //
 
-import axios from "axios";
+// import axios from "axios";
 
-axios.get('http://localhost:5000/api/topics')
-.then(res => {
-  console.log(res)
-})
-.catch(err => {
-  console.error(err)
-})
-const webTabs = document.querySelector('.tabs-container');
 
+
+// const tabTopics = document.createElement('div');
+// // const tab = document.createElement('div');
+// // const tab = document.createElement('div');
+// // const tab = document.createElement('div')
+
+
+
+// tabTopics.classList.add('topics');
+// // tabTopics.classList.add('tab');
+// // tabTopics.classList.add('tab');
+// // tabTopics.classList.add('tab');
 const Tabs = (topics) => {
+// topics.forEach(topic => {
+//   const tab = document.createElement('div');
+//   tabTopics.classList.add('tab');
+//   // const tab = document.createElement('tab');
 
-const tabTopics = document.createElement('div');
-const tab1 = document.createElement('div');
-const tab2 = document.createElement('div');
-const tab3 = document.createElement('div')
-
-tabTopics.classList.add('topics');
-tabTopics.classList.add('tab');
-tabTopics.classList.add('tab');
-tabTopics.classList.add('tab');
-
-tabTopics.appendChild(tab1);
-tabTopics.appendChild(tab2);
-tabTopics.appendChild(tab3);
-
-topics.forEach(item => {
-  const topicArr = document.createElement('tab');
-  topicArr.textContent = item;
-  topics.appendChild(topicArr);
-})
+//   tab.textContent = topic;
+//   topics.appendChild(tab);
+// })
 
 }
 
-
-const tabsAppender = (selector) => {
   // TASK 4
   // ---------------------
   // Implement this function which takes a css selector as its only argument.
@@ -60,14 +50,17 @@ const tabsAppender = (selector) => {
   //
 
 const tabsAppender = (selector) => {
-axios.get(`http://localhost:5000/api/topics${topics}`)
-.then(res => {
-})
-.catch(err => {
-
-})
+//   const tabs = document.querySelector(selector)
+// axios.get(`http://localhost:5000/api/topics`)
+// .then(res => {
+//   const topicArr = res.data.topics;
+//   tabs.appendChild(Tabs(topicArr));
+// })
+// .catch(err => {
+//   console.error(err);
+// })
 
 }
-}
+
 
 export { Tabs, tabsAppender }
