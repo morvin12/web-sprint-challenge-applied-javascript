@@ -5,6 +5,10 @@ const Header = (title, date, temp) => {
   const headerTitle = document.createElement('h1');
   const headerTemp = document.createElement('span');
 
+  header.appendChild(headerTitle);
+  header.appendChild(headerDate);
+  header.appendChild(headerTemp);
+
   header.classList.add('header');
   headerDate.classList.add('date');
   headerTitle.classList.add('h1')
@@ -14,9 +18,7 @@ const Header = (title, date, temp) => {
   headerTitle.textContent = title;
   headerTemp.textContent = temp;
 
-  header.appendChild(headerTitle);
-  header.appendChild(headerDate);
-  header.appendChild(headerTemp);
+  
 
   return header;
 
@@ -38,8 +40,9 @@ const Header = (title, date, temp) => {
 
   
 
-const headerContainer = document.querySelector('.header-container');
+
 const headerAppender = (selector) => {
+const headerContainer = document.querySelector(selector);
   headerContainer.appendChild(Header(selector));
   // TASK 2
   // ---------------------
