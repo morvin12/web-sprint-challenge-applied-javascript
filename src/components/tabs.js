@@ -32,7 +32,7 @@
 
 import axios from "axios"
 const Tabs = (topics) => {
-topics.array.forEach(topic => {
+// topics.array.forEach(topic => {
 const tabTopics = document.createElement('div');
 const tab = document.createElement('div');
 
