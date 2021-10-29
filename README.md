@@ -60,7 +60,17 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+- The Document Object Model, it is a programming interface for web documents. It can change the document structure, style , and content.
+
 2. What is an event?
+-The event interface is an event that takes place in the DOM. Events are often triggered by user actions, or programmatically.
+
 3. What is an event listener?
+- Takes in two arguments, first the event to listen for and second the callback to fire when that event is triggered.
+
 4. Why would we convert a NodeList into an Array?
+- Because it allows us to acccess DOM elements which then makes it easier for us to manipulate the data through JS.
+
 5. What is a component?
+- Components are the glue that holds everything together. Components allow us to create and customize elements. 
+
