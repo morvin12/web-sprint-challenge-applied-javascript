@@ -1,21 +1,5 @@
-// import axios from "axios"
-// const Tabs = (topics) => {
 
-// const tabTopics = document.createElement('div');
-// const tab = document.createElement('div');
-
-// tabTopics.classList.add('topics');
-// tab.classList.add('tab');
-
-// tab.textContent = topic;
-
-// tabTopics.appendChild(tab);
-
-
-
-
-
-  // TASK 3
+// TASK 3
   // ---------------------
   // Implement this function which takes an array of strings ("topics") as its only argument.
   // As an example, if the topics passed are ['javascript', 'bootstrap', 'technology']
@@ -30,25 +14,43 @@
   // </div>
   //
 
-import axios from "axios"
+import axios from "axios";
+
+axios.get('http://localhost:5000/api/topics')
+.then(res => {
+  console.log(res)
+})
+.catch(err => {
+  console.error(err)
+})
+const webTabs = document.querySelector('.tabs-container');
+
 const Tabs = (topics) => {
-topics.array.forEach(topic => {
+
 const tabTopics = document.createElement('div');
-const tab = document.createElement('div');
+const tab1 = document.createElement('div');
+const tab2 = document.createElement('div');
+const tab3 = document.createElement('div')
 
 tabTopics.classList.add('topics');
-tab.classList.add('tab');
+tabTopics.classList.add('tab');
+tabTopics.classList.add('tab');
+tabTopics.classList.add('tab');
 
-tab.textContent = topic;
+tabTopics.appendChild(tab1);
+tabTopics.appendChild(tab2);
+tabTopics.appendChild(tab3);
 
-tabTopics.appendChild(tab);
+topics.forEach(item => {
+  const topicArr = document.createElement('tab');
+  topicArr.textContent = item;
+  topics.appendChild(topicArr);
+})
 
-  
-});
-return tabTopics
 }
 
 
+const tabsAppender = (selector) => {
   // TASK 4
   // ---------------------
   // Implement this function which takes a css selector as its only argument.
@@ -56,17 +58,16 @@ return tabTopics
   // Find the array of topics inside the response, and create the tabs using the Tabs component.
   // Append the tabs to the element in the DOM that matches the selector passed to the function.
   //
+
 const tabsAppender = (selector) => {
-  const tabs = document.querySelector(selector);
-  axios.get('http://localhost:5000/api/topics')
-  .then(res => {
-    console.log(res)
-    const topicArray = res.data.topics
-    tabs.appendChild(tabs(topicArray)); 
-  })
-  .catch(err => {
-    console.error(err)
-  })
+axios.get(`http://localhost:5000/api/topics${topics}`)
+.then(res => {
+})
+.catch(err => {
+
+})
+
+}
 }
 
 export { Tabs, tabsAppender }
