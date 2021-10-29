@@ -16,24 +16,25 @@
 
 // import axios from "axios";
 
+const Tabs = (topics) => {
 
 
 // const tabTopics = document.createElement('div');
-// // const tab = document.createElement('div');
-// // const tab = document.createElement('div');
-// // const tab = document.createElement('div')
+// const tab = document.createElement('div');
+// const tab = document.createElement('div');
+// const tab = document.createElement('div')
 
 
 
 // tabTopics.classList.add('topics');
-// // tabTopics.classList.add('tab');
-// // tabTopics.classList.add('tab');
-// // tabTopics.classList.add('tab');
-const Tabs = (topics) => {
+// tabTopics.classList.add('tab');
+// tabTopics.classList.add('tab');
+// tabTopics.classList.add('tab');
+
 // topics.forEach(topic => {
 //   const tab = document.createElement('div');
 //   tabTopics.classList.add('tab');
-//   // const tab = document.createElement('tab');
+//   const tab = document.createElement('tab');
 
 //   tab.textContent = topic;
 //   topics.appendChild(tab);
